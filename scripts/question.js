@@ -1,4 +1,4 @@
-import { baseUrl } from "./baseUrl";
+import { baseUrl } from "./baseUrl.js";
 
 function fetchReviewedQuestion() {
     fetch(`${baseUrl}`)
