@@ -1,0 +1,1 @@
+export const baseUrl = "https://purple-tungsten-larkspur.glitch.me/";
