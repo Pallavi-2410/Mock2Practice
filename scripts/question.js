@@ -6,17 +6,17 @@ function fetchReviewedQuestion() {
         .then(data => {
             let grid = document.getElementById("reviewedQuestionGrid")
             grid.innerHTML = "";
-            let reviewedQuestion = data.filter(q => q.reviewStatus == true)
-            reviewedQuestion.forEach(question => {
+            let reviewedQuestion = data.filter(questions => questions.reviewStatus == true)
+            reviewedQuestion.forEach(questions => {
                 let card = document.createElement("div")
                 card.className = "question-card"
                 card.style.borderColor = "violet"
                 card.innerHTML = `
-            <h3>${question.title}</h3>
-            <h3>${question.optionA}</h3>
-            <h3>${question.optionB}</h3>
-            <h3>${question.optionC}</h3>
-            <h3>${question.optionD}</h3>
+            <h3>${questions.title}</h3>
+            <h3>${questions.optionA}</h3>
+            <h3>${questions.optionB}</h3>
+            <h3>${questions.optionC}</h3>
+            <h3>${questions.optionD}</h3>
             `
             grid.appendChild(card)
             });            
